@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SELF NUTRITION GLP-1 Berberine — Alternativa Naturală la Ozempic</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --green-deep: #1a3a2a;
+    --green-mid: #2d6a4f;
+    --green-accent: #52b788;
+    --green-light: #d8f3dc;
+    --gold: #c9933a;
+    --gold-light: #f4e4c1;
+    --cream: #faf7f2;
+    --white: #ffffff;
+    --dark: #1a1a1a;
+    --gray: #6b7280;
+    --gray-light: #f3f4f6;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--dark);
+    overflow-x: hidden;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    background: linear-gradient(160deg, var(--green-deep) 0%, #0f2419 60%, #1a3a2a 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 80px 24px 60px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 70% 60% at 50% 40%, rgba(82,183,136,0.12) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0; right: 0;
+    height: 80px;
+    background: var(--cream);
+    clip-path: ellipse(55% 100% at 50% 100%);
+  }
+
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(82,183,136,0.15);
+    border: 1px solid rgba(82,183,136,0.35);
+    color: var(--green-accent);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 8px 18px;
+    border-radius: 100px;
+    margin-bottom: 32px;
+    animation: fadeDown 0.8s ease both;
+  }
+
+  .hero-eyebrow {
+    font-family: 'DM Sans', sans-serif;
+    font-size: clamp(14px, 2vw, 17px);
+    font-weight: 400;
+    color: rgba(255,255,255,0.65);
+    margin-bottom: 20px;
+    letter-spacing: 0.3px;
+    animation: fadeDown 0.9s 0.1s ease both;
+  }
+
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(36px, 6vw, 72px);
+    font-weight: 900;
+    color: var(--white);
+    line-height: 1.08;
+    max-width: 860px;
+    margin-bottom: 28px;
+    animation: fadeDown 1s 0.2s ease both;
+  }
+
+  .hero h1 em {
+    font-style: italic;
+    color: var(--green-accent);
+  }
+
+  .hero-sub {
+    font-size: clamp(16px, 2.2vw, 20px);
+    color: rgba(255,255,255,0.75);
+    max-width: 600px;
+    line-height: 1.65;
+    margin-bottom: 48px;
+    font-weight: 300;
+    animation: fadeDown 1s 0.35s ease both;
+  }
+
+  .hero-sub strong {
+    color: var(--white);
+    font-weight: 600;
+  }
+
+  .cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(135deg, var(--gold) 0%, #e0a94a 100%);
+    color: var(--white);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+    padding: 18px 40px;
+    border-radius: 100px;
+    text-decoration: none;
+    box-shadow: 0 8px 32px rgba(201,147,58,0.45), 0 2px 8px rgba(0,0,0,0.2);
+    transition: transform 0.2s, box-shadow 0.2s;
+    animation: fadeDown 1s 0.5s ease both;
+    cursor: pointer;
+    border: none;
+  }
+
+  .cta-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 40px rgba(201,147,58,0.55), 0 4px 12px rgba(0,0,0,0.2);
+  }
+
+  .cta-btn svg { width: 20px; height: 20px; }
+
+  .hero-trust {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-top: 32px;
+    flex-wrap: wrap;
+    justify-content: center;
+    animation: fadeDown 1s 0.65s ease both;
+  }
+
+  .trust-item {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: rgba(255,255,255,0.55);
+    font-size: 13px;
+  }
+
+  .trust-item span { color: var(--green-accent); font-size: 16px; }
+
+  /* ── SECTIONS COMMON ── */
+  section { padding: 80px 24px; }
+
+  .container { max-width: 860px; margin: 0 auto; }
+
+  .section-label {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--green-mid);
+    background: var(--green-light);
+    padding: 6px 14px;
+    border-radius: 100px;
+    margin-bottom: 20px;
+  }
+
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(28px, 4vw, 44px);
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--green-deep);
+    margin-bottom: 20px;
+  }
+
+  .section-title em { font-style: italic; color: var(--green-mid); }
+
+  /* ── PAIN SECTION ── */
+  .pain-section {
+    background: var(--white);
+  }
+
+  .pain-intro {
+    font-size: clamp(16px, 2vw, 19px);
+    color: var(--gray);
+    line-height: 1.75;
+    margin-bottom: 40px;
+    font-weight: 300;
+  }
+
+  .pain-intro strong { color: var(--dark); font-weight: 600; }
+
+  .frustrations {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+
+  .frustration-item {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    padding: 20px 24px;
+    background: #fff5f5;
+    border-left: 4px solid #e57373;
+    border-radius: 0 12px 12px 0;
+  }
+
+  .frustration-item .icon { font-size: 22px; flex-shrink: 0; margin-top: 2px; }
+
+  .frustration-item p {
+    font-size: 15px;
+    color: #4a1a1a;
+    line-height: 1.6;
+  }
+
+  .frustration-item p strong { color: #c62828; }
+
+  .pain-truth {
+    background: var(--green-deep);
+    color: var(--white);
+    padding: 36px 40px;
+    border-radius: 20px;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .pain-truth p {
+    font-size: clamp(18px, 2.5vw, 24px);
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    line-height: 1.5;
+    margin-bottom: 12px;
+  }
+
+  .pain-truth small {
+    color: var(--green-accent);
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  /* ── BENEFITS ── */
+  .benefits-section { background: var(--cream); }
+
+  .benefits-grid {
+    display: grid;
+    gap: 16px;
+    margin-bottom: 48px;
+  }
+
+  .benefit-card {
+    display: flex;
+    gap: 18px;
+    align-items: flex-start;
+    padding: 24px 28px;
+    background: var(--white);
+    border-radius: 16px;
+    box-shadow: 0 2px 16px rgba(45,106,79,0.07);
+    border: 1px solid rgba(82,183,136,0.15);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .benefit-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 28px rgba(45,106,79,0.12);
+  }
+
+  .benefit-check {
+    width: 32px;
+    height: 32px;
+    background: linear-gradient(135deg, var(--green-mid), var(--green-accent));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: white;
+    font-size: 16px;
+    margin-top: 2px;
+  }
+
+  .benefit-text strong {
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--green-deep);
+    margin-bottom: 4px;
+  }
+
+  .benefit-text p {
+    font-size: 14px;
+    color: var(--gray);
+    line-height: 1.6;
+    font-weight: 300;
+  }
+
+  /* ── MECHANISM ── */
+  .mechanism-section {
+    background: linear-gradient(160deg, var(--green-deep), #0f2419);
+    color: var(--white);
+  }
+
+  .mechanism-section .section-label {
+    background: rgba(82,183,136,0.2);
+    color: var(--green-accent);
+  }
+
+  .mechanism-section .section-title { color: var(--white); }
+  .mechanism-section .section-title em { color: var(--green-accent); }
+
+  .mechanism-box {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(82,183,136,0.25);
+    border-radius: 20px;
+    padding: 36px 40px;
+    margin: 36px 0;
+  }
+
+  .mechanism-box .visual-model {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(18px, 2.5vw, 22px);
+    font-style: italic;
+    color: var(--green-accent);
+    line-height: 1.6;
+    text-align: center;
+  }
+
+  .mech-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 24px;
+    margin-top: 40px;
+  }
+
+  .mech-step {
+    text-align: center;
+    padding: 24px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 16px;
+    border: 1px solid rgba(82,183,136,0.15);
+  }
+
+  .mech-step .num {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    font-weight: 900;
+    color: rgba(82,183,136,0.3);
+    line-height: 1;
+    margin-bottom: 12px;
+  }
+
+  .mech-step strong {
+    display: block;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--green-accent);
+    margin-bottom: 8px;
+  }
+
+  .mech-step p {
+    font-size: 13px;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.6;
+    font-weight: 300;
+  }
+
+  /* ── STORY ── */
+  .story-section { background: var(--white); }
+
+  .story-block {
+    background: var(--cream);
+    border-radius: 24px;
+    padding: 48px;
+    border: 1px solid rgba(45,106,79,0.1);
+    position: relative;
+  }
+
+  .story-block::before {
+    content: '"';
+    position: absolute;
+    top: 20px;
+    left: 36px;
+    font-family: 'Playfair Display', serif;
+    font-size: 100px;
+    color: var(--green-light);
+    line-height: 1;
+    pointer-events: none;
+  }
+
+  .story-text {
+    font-size: clamp(15px, 1.8vw, 17px);
+    color: #374151;
+    line-height: 1.85;
+    font-weight: 300;
+    position: relative;
+    z-index: 1;
+  }
+
+  .story-text p { margin-bottom: 18px; }
+  .story-text strong { color: var(--green-deep); font-weight: 600; }
+
+  .story-highlight {
+    background: var(--green-deep);
+    color: var(--white);
+    padding: 24px 32px;
+    border-radius: 14px;
+    margin: 28px 0;
+    font-size: 17px;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    line-height: 1.6;
+    text-align: center;
+  }
+
+  .story-highlight span { color: var(--green-accent); }
+
+  /* ── SOCIAL PROOF ── */
+  .proof-section { background: var(--gray-light); }
+
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+    margin-bottom: 48px;
+  }
+
+  .testimonial-card {
+    background: var(--white);
+    border-radius: 18px;
+    padding: 28px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+    border: 1px solid rgba(0,0,0,0.05);
+  }
+
+  .stars {
+    color: #f59e0b;
+    font-size: 18px;
+    margin-bottom: 14px;
+  }
+
+  .testimonial-card blockquote {
+    font-size: 14px;
+    color: #4b5563;
+    line-height: 1.7;
+    font-style: italic;
+    margin-bottom: 18px;
+    font-weight: 300;
+  }
+
+  .testimonial-card blockquote strong {
+    color: var(--green-deep);
+    font-style: normal;
+    font-weight: 600;
+  }
+
+  .testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .author-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--green-mid), var(--green-accent));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: 'Playfair Display', serif;
+    flex-shrink: 0;
+  }
+
+  .author-info strong {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--dark);
+  }
+
+  .author-info span {
+    font-size: 12px;
+    color: var(--gray);
+  }
+
+  /* ── PS SECTION ── */
+  .ps-section {
+    background: linear-gradient(160deg, var(--green-deep), #0f2419);
+    color: var(--white);
+    text-align: center;
+  }
+
+  .ps-section .section-title { color: var(--white); }
+
+  .ps-box {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(82,183,136,0.3);
+    border-radius: 20px;
+    padding: 40px;
+    max-width: 640px;
+    margin: 36px auto;
+  }
+
+  .ps-box p {
+    font-size: 17px;
+    color: rgba(255,255,255,0.85);
+    line-height: 1.75;
+    margin-bottom: 28px;
+    font-weight: 300;
+  }
+
+  .ps-checks {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    text-align: left;
+    margin-bottom: 32px;
+  }
+
+  .ps-check {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 16px;
+    color: var(--white);
+    font-weight: 500;
+  }
+
+  .ps-check .dot {
+    width: 24px;
+    height: 24px;
+    background: var(--green-accent);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    flex-shrink: 0;
+  }
+
+  .usp-line {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(18px, 2.5vw, 24px);
+    font-style: italic;
+    color: var(--green-accent);
+    line-height: 1.5;
+    margin-bottom: 40px;
+  }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ── DIVIDER ── */
+  .divider {
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--green-mid), var(--green-accent));
+    border-radius: 2px;
+    margin: 20px 0 32px;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--dark);
+    color: rgba(255,255,255,0.4);
+    text-align: center;
+    padding: 28px 24px;
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  footer strong { color: rgba(255,255,255,0.7); }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 600px) {
+    .story-block { padding: 32px 24px; }
+    .mechanism-box { padding: 24px; }
+    .pain-truth { padding: 28px 24px; }
+    .ps-box { padding: 28px 20px; }
+    .hero-trust { gap: 14px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══ HERO ═══ -->
+<section class="hero">
+  <div class="badge">✦ Formula Clinică Naturală ✦</div>
+
+  <p class="hero-eyebrow">Dacă ești o femeie între 30-50 ani care s-a săturat să lupte cu poftele, balonarea și kilogramele care revin mereu…</p>
+
+  <div style="display:flex; align-items:center; justify-content:center; gap:48px; flex-wrap:wrap; width:100%; max-width:1000px; margin-bottom:28px;">
+    <div style="flex:1; min-width:280px; text-align:left;">
+      <h1 style="text-align:left;"><span style="color:#f5d800;">SELF NUTRITION GLP-1 Berberine</span> — reduce poftele, stabilizează energia și te ajută să slăbești sustenabil</h1>
+    </div>
+    <div style="flex-shrink:0;">
+      <img src="https://m.media-amazon.com/images/I/61WrxShlfyL._AC_SL1500_.jpg" alt="SELF NUTRITION GLP-1 Berberine" style="width:520px; height:auto; border-radius:20px; box-shadow:0 12px 48px rgba(0,0,0,0.35);" />
+    </div>
+  </div>
+
+  <p class="hero-sub">
+    <strong>SELF NUTRITION GLP-1 Berberine</strong> activează același mecanism metabolic ca medicamentele GLP-1 — prin știință, nu prin hype. Fără să te înfometezi. Fără să renunți la mâncărurile tale preferate.
+  </p>
+
+  <a href="https://www.amazon.com/SELF-NUTRITION-Berberine-Supplement-Resveratrol/dp/B0FZWC9VYQ" target="_blank" class="cta-btn">
+    Vreau să descopăr cum funcționează
+    <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+    </svg>
+  </a>
+
+  <div class="hero-trust">
+    <div class="trust-item"><span>✦</span> Fără injecții</div>
+    <div class="trust-item"><span>✦</span> Fără prescripție</div>
+    <div class="trust-item"><span>✦</span> Formulă vegană &amp; fără gluten</div>
+    <div class="trust-item"><span>✦</span> Mecanism dovedit științific</div>
+  </div>
+</section>
+
+<!-- ═══ PAIN SECTION ═══ -->
+<section class="pain-section">
+  <div class="container">
+    <div class="section-label">Îți înțeleg frustrarea</div>
+    <h2 class="section-title">Știu exact cum te simți…</h2>
+    <div class="divider"></div>
+
+    <p class="pain-intro">
+      Poate că te lupți de ani de zile. Ai încercat diete keto, post intermitent, suplimente termogenice — le-ai văzut pe toate pe TikTok, le-ai încercat pe toate în viața reală.<br><br>
+      La început, poate ai slăbit câteva kilograme. Dar apoi au revenit. Sau și mai rău — <strong>corpul tău a încetat să mai răspundă la orice.</strong>
+    </p>
+
+    <div class="frustrations">
+      <div class="frustration-item">
+        <div class="icon">😔</div>
+        <p>Ai urmat diete restrictive săptămâni întregi… și ai recăpătat totul înapoi imediat ce ai mâncat <strong>normal o singură zi.</strong></p>
+      </div>
+      <div class="frustration-item">
+        <div class="icon">😤</div>
+        <p>Ai cheltuit bani pe suplimente „naturale" care promit miracole în <strong>„săptămâni, nu luni"</strong> — și nu s-a întâmplat nimic, sau mai rău, au apărut crampele.</p>
+      </div>
+      <div class="frustration-item">
+        <div class="icon">😰</div>
+        <p>Auzi de Ozempic și Wegovy peste tot, dar te sperie <strong>costurile, injecțiile și efectele secundare.</strong> Vrei beneficiile — fără riscuri.</p>
+      </div>
+      <div class="frustration-item">
+        <div class="icon">😩</div>
+        <p>Poftele apar constant — chiar și după ce ai mâncat. <strong>Energia ta se prăbușește</strong> după-amiaza. Te gândești la mâncare aproape non-stop.</p>
+      </div>
+      <div class="frustration-item">
+        <div class="icon">💔</div>
+        <p>Te simți ca un <strong>„eșec"</strong> — nu din lipsă de voință, ci pentru că nimic nu funcționează, oricât te străduiești.</p>
+      </div>
+    </div>
+
+    <div class="pain-truth">
+      <p>„Nu e lipsa ta de voință. E biologia ta."</p>
+      <small>Când glicemia fluctuează constant, corpul tău produce semnale chimice de foame pe care nicio dietă nu le poate opri — dacă nu tratezi cauza reală.</small>
+    </div>
+
+    <p style="font-size:16px; color:var(--gray); line-height:1.7; margin-bottom:36px; font-weight:300;">
+      Exact de aceea am creat <strong style="color:var(--green-deep)">SELF NUTRITION GLP-1 Berberine</strong> — pentru a-ți oferi o cale diferită, susținută de știință, nu de marketing.
+    </p>
+
+    <div style="text-align:center;">
+      <a href="https://www.amazon.com/SELF-NUTRITION-Berberine-Supplement-Resveratrol/dp/B0FZWC9VYQ" target="_blank" class="cta-btn">Descoperă metoda acum →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ BENEFITS ═══ -->
+<section class="benefits-section">
+  <div class="container">
+    <div class="section-label">Ce vei obține</div>
+    <h2 class="section-title">Ce <em>activează</em> SELF NUTRITION GLP-1 Berberine în corpul tău…</h2>
+    <div class="divider"></div>
+
+    <div class="benefits-grid">
+      <div class="benefit-card">
+        <div class="benefit-check">✓</div>
+        <div class="benefit-text">
+          <strong>Reducerea vizibilă a poftelor în 2-4 săptămâni</strong>
+          <p>Berberina reglează glicemia, eliminând spike-urile care declanșează foamea. Nu te mai gândești la mâncare la fiecare oră.</p>
+        </div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-check">✓</div>
+        <div class="benefit-text">
+          <strong>Energie stabilă toată ziua, fără crash-uri</strong>
+          <p>Glicemie echilibrată = energie constantă. Fără oboseală după-amiaza, fără nevoia de cafea în exces.</p>
+        </div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-check">✓</div>
+        <div class="benefit-text">
+          <strong>De ce Ozempic funcționează — și cum să obții același efect natural</strong>
+          <p>Calea AMPK: același mecanism activat de medicamentele GLP-1, acum accesibil printr-o capsulă curată.</p>
+        </div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-check">✓</div>
+        <div class="benefit-text">
+          <strong>Slăbire graduală reală: 0,5-2 kg/lună — sustenabilă</strong>
+          <p>Nu dramatică, dar vizibilă și permanentă. Fără efect yo-yo, fără să te înfometezi.</p>
+        </div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-check">✓</div>
+        <div class="benefit-text">
+          <strong>Fără injecții, fără prescripție, fără costuri de sute de dolari</strong>
+          <p>Beneficiile GLP-1 printr-o capsulă accesibilă, pe care o poți lua oricând, oriunde.</p>
+        </div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-check">✓</div>
+        <div class="benefit-text">
+          <strong>Formulă curată: vegană, fără gluten, fără stimulente</strong>
+          <p>Nicio cafeină artificială, nicio anxietate. Acțiune metabolică naturală, nu artificială.</p>
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align:center;">
+      <a href="https://www.amazon.com/SELF-NUTRITION-Berberine-Supplement-Resveratrol/dp/B0FZWC9VYQ" target="_blank" class="cta-btn">Vreau acces acum →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ MECHANISM ═══ -->
+<section class="mechanism-section">
+  <div class="container">
+    <div class="section-label">Știința din spate</div>
+    <h2 class="section-title">De ce funcționează — <em>explicat simplu</em></h2>
+    <div class="divider" style="background: linear-gradient(90deg, var(--green-accent), #74c99b);"></div>
+
+    <p style="font-size:17px; color:rgba(255,255,255,0.75); line-height:1.75; margin-bottom:36px; font-weight:300;">
+      Berberina activează calea <strong style="color:var(--white)">AMPK</strong> — același mecanism ca Metformin-ul și parțial ca medicamentele GLP-1. Nu e marketing. Sunt studii clinice comparabile cu medicamentele prescrise.
+    </p>
+
+    <div class="mechanism-box">
+      <p class="visual-model">
+        „Berberina e cheia care deblochează motorul metabolic. În loc să forțezi corpul cu stimulente, îi dai semnalul intern să proceseze mai eficient zahărul și să reducă stocarea grăsimilor — exact ce fac medicamentele GLP-1, dar prin natură."
+      </p>
+    </div>
+
+    <div class="mech-steps">
+      <div class="mech-step">
+        <div class="num">01</div>
+        <strong>Reglare glicemică</strong>
+        <p>Reduce producția de glucoză hepatică și îmbunătățește sensibilitatea la insulină</p>
+      </div>
+      <div class="mech-step">
+        <div class="num">02</div>
+        <strong>Reducerea poftelor</strong>
+        <p>Glicemie stabilă = niciun spike care să declanșeze foamea sau poftele</p>
+      </div>
+      <div class="mech-step">
+        <div class="num">03</div>
+        <strong>Sațietate naturală</strong>
+        <p>Încetinește digestia și crește senzația de sațietate în mod natural</p>
+      </div>
+      <div class="mech-step">
+        <div class="num">04</div>
+        <strong>Arderea grăsimilor</strong>
+        <p>Reduce stocarea grăsimilor și susține metabolismul activ fără stimulente</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ STORY ═══ -->
+<section class="story-section">
+  <div class="container">
+    <div class="section-label">Povestea noastră</div>
+    <h2 class="section-title">Cine suntem și de ce ar trebui să ne asculți?</h2>
+    <div class="divider"></div>
+
+    <div class="story-block">
+      <div class="story-text">
+        <p>Am văzut prea multe femei care se luptau cu același ciclu epuizant. Diete care funcționează o lună, suplimente care promit și dezamăgesc, bani cheltuiți pe soluții care nu adresează cauza reală.</p>
+
+        <p>Problema nu era lipsa de voință. Era că <strong>nicio soluție nu abordase rezistența la insulină și sațietatea simultan.</strong></p>
+
+        <p>Am studiat mecanismul din spatele medicamentelor GLP-1 care au schimbat lumea — Ozempic, Wegovy. Am înțeles de ce funcționează: activarea căii AMPK, reglarea glicemiei, reducerea naturală a poftelor.</p>
+
+        <div class="story-highlight">
+          Și ne-am întrebat: <span>există un mod natural de a activa același mecanism — fără injecții, fără prescripție, fără efecte secundare severe?</span>
+        </div>
+
+        <p>Răspunsul era deja în știința tradițională: <strong>Berberina</strong> — folosită de medicina tradițională de peste 1.000 de ani, validată acum de studii clinice moderne ca având efect comparabil cu Metformin-ul.</p>
+
+        <p>Așa a apărut <strong>SELF NUTRITION GLP-1 Berberine</strong> — formulat specific pentru femei care vor control metabolic real, nu un simplu supresor al apetitului. Curată, vegană, fără stimulente. Și mai ales — cu un mecanism real în spate.</p>
+
+        <p><strong>Dacă și tu ai ajuns la concluzia că „poate pur și simplu nu pot slăbi" — te înțelegem. Și vrem să îți arătăm că problema nu ești tu.</strong></p>
+      </div>
+    </div>
+
+    <div style="text-align:center; margin-top:40px;">
+      <a href="https://www.amazon.com/SELF-NUTRITION-Berberine-Supplement-Resveratrol/dp/B0FZWC9VYQ" target="_blank" class="cta-btn">Descoperă SELF NUTRITION GLP-1 Berberine →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SOCIAL PROOF ═══ -->
+<section class="proof-section">
+  <div class="container">
+    <div class="section-label">Rezultate reale</div>
+    <h2 class="section-title">Ce spun cele care l-au <em>încercat</em></h2>
+    <div class="divider"></div>
+
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <blockquote>„În primele două săptămâni am observat că <strong>nu mai mă gândeam la mâncare constant.</strong> Poftele s-au liniștit. La 6 săptămâni — minus 4 kg. Fără să mă înfometez, fără să renunț la nimic."</blockquote>
+        <div class="testimonial-author">
+          <div class="author-avatar">A</div>
+          <div class="author-info">
+            <strong>Andreea M.</strong>
+            <span>38 ani · București</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <blockquote>„Am încercat Ozempic și nu mi-am permis să continui. Am trecut la GLP-1 Berberine și, sincer, <strong>efectul pe pofte e similar</strong> — fără injecție, fără costul imens."</blockquote>
+        <div class="testimonial-author">
+          <div class="author-avatar">M</div>
+          <div class="author-info">
+            <strong>Mihaela T.</strong>
+            <span>44 ani · Cluj-Napoca</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <blockquote>„Am energie stabilă toată ziua. Nu mai am <strong>acel crash de după-amiaza</strong> care mă trimitea direct la dulciuri. Și pantalonii mă prind din nou după 2 luni."</blockquote>
+        <div class="testimonial-author">
+          <div class="author-avatar">C</div>
+          <div class="author-info">
+            <strong>Cristina R.</strong>
+            <span>35 ani · Iași</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align:center;">
+      <a href="https://www.amazon.com/SELF-NUTRITION-Berberine-Supplement-Resveratrol/dp/B0FZWC9VYQ" target="_blank" class="cta-btn">Vreau și eu aceste rezultate →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PS SECTION ═══ -->
+<section class="ps-section">
+  <div class="container" style="text-align:center;">
+    <div class="section-label" style="background:rgba(82,183,136,0.2); color:var(--green-accent);">P.S.</div>
+    <h2 class="section-title" style="color:var(--white);">Dacă ai derulat până jos — iată varianta scurtă</h2>
+    <div class="divider" style="margin: 20px auto 32px; background: linear-gradient(90deg, var(--green-accent), #74c99b);"></div>
+
+    <p class="usp-line">
+      „SELF NUTRITION GLP-1 Berberine — Beneficiile Ozempic, fără ace. Știință metabolică într-o capsulă curată, pentru femei care vor rezultate reale, nu promisiuni."
+    </p>
+
+    <div class="ps-box">
+      <p>Acest supliment te ajută să reduci poftele, să stabilizezi energia și să slăbești gradual și sustenabil — fără injecții, fără prescripție și fără să te înfometezi.</p>
+
+      <div class="ps-checks">
+        <div class="ps-check"><div class="dot">✓</div> E rapid — primele rezultate în 2-4 săptămâni</div>
+        <div class="ps-check"><div class="dot">✓</div> E simplu — o capsulă, un mecanism clar</div>
+        <div class="ps-check"><div class="dot">✓</div> Funcționează — chiar și dacă ai mai eșuat înainte</div>
+        <div class="ps-check"><div class="dot">✓</div> E curat — vegan, fără gluten, fără stimulente</div>
+      </div>
+
+      <a href="https://www.amazon.com/SELF-NUTRITION-Berberine-Supplement-Resveratrol/dp/B0FZWC9VYQ" target="_blank" class="cta-btn" style="width:100%; justify-content:center; font-size:18px; padding:20px 40px;">
+        Descoperă SELF NUTRITION GLP-1 Berberine acum →
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p><strong>SELF NUTRITION GLP-1 Berberine</strong> · Supliment alimentar natural · Rezultatele pot varia de la persoană la persoană.<br>
+  Acest produs nu este destinat diagnosticării, tratării sau prevenirii oricărei boli. Consultați medicul înainte de utilizare.</p>
+</footer>
+
+</body>
+</html>

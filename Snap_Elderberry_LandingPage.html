@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Snap Supplements Elderberry Gummies</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --deep-purple: #2D1B69;
+    --mid-purple: #5B2D8E;
+    --berry: #9B2D5A;
+    --gold: #C9933A;
+    --cream: #FDF8F0;
+    --dark: #1A1020;
+    --text: #2C2040;
+    --light-purple: #EDE5F7;
+    --white: #FFFFFF;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--text);
+    overflow-x: hidden;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    background: linear-gradient(135deg, var(--deep-purple) 0%, var(--mid-purple) 50%, var(--berry) 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 80px 24px 60px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 60% 50% at 20% 30%, rgba(155,45,90,0.35) 0%, transparent 70%),
+      radial-gradient(ellipse 40% 60% at 80% 70%, rgba(91,45,142,0.4) 0%, transparent 70%);
+  }
+
+  .hero::after {
+    content: '🫐';
+    position: absolute;
+    font-size: 320px;
+    opacity: 0.06;
+    right: -60px;
+    top: -40px;
+    pointer-events: none;
+    animation: float 8s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(5deg); }
+  }
+
+  .hero-inner {
+    position: relative;
+    z-index: 2;
+    max-width: 1060px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 820px;
+    gap: 60px;
+    align-items: center;
+    text-align: left;
+  }
+
+  .hero-content { display: flex; flex-direction: column; align-items: flex-start; }
+
+  .hero-image-col {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: -240px;
+    margin-left: -20px;
+  }
+
+  @media (max-width: 820px) {
+    .hero-inner {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+    .hero-content { align-items: center; }
+    .hero-image-col { order: -1; }
+    .hero-sub { margin: 0 auto 40px; }
+    .hero-trust { justify-content: center; }
+  }
+
+  .hero-badge {
+    display: inline-block;
+    background: rgba(201,147,58,0.25);
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 8px 20px;
+    border-radius: 40px;
+    margin-bottom: 28px;
+    animation: fadeDown 0.8s ease both;
+  }
+
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(36px, 6vw, 72px);
+    font-weight: 900;
+    color: var(--white);
+    line-height: 1.1;
+    margin-bottom: 28px;
+    animation: fadeDown 0.8s 0.15s ease both;
+  }
+
+  .hero h1 em {
+    font-style: italic;
+    color: var(--gold);
+  }
+
+  .hero-sub {
+    font-size: clamp(16px, 2.5vw, 20px);
+    color: rgba(255,255,255,0.82);
+    line-height: 1.7;
+    max-width: 640px;
+    margin: 0 auto 40px;
+    font-weight: 300;
+    animation: fadeDown 0.8s 0.3s ease both;
+  }
+
+  .hero-sub strong { color: var(--white); font-weight: 600; }
+
+  .cta-btn {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--gold), #E8A84A);
+    color: var(--dark);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    padding: 18px 44px;
+    border-radius: 60px;
+    text-decoration: none;
+    letter-spacing: 0.3px;
+    box-shadow: 0 8px 32px rgba(201,147,58,0.45);
+    transition: all 0.3s ease;
+    animation: fadeDown 0.8s 0.45s ease both;
+    cursor: pointer;
+    border: none;
+  }
+
+  .cta-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 40px rgba(201,147,58,0.55);
+    background: linear-gradient(135deg, #E8A84A, var(--gold));
+  }
+
+  .hero-trust {
+    margin-top: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    animation: fadeDown 0.8s 0.6s ease both;
+  }
+
+  .trust-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: rgba(255,255,255,0.7);
+    font-size: 13px;
+    font-weight: 500;
+  }
+
+  .trust-item span { font-size: 16px; }
+
+  .hero-image-wrapper {
+    width: 100%;
+    max-width: 780px;
+    aspect-ratio: 1 / 1;
+    border-radius: 28px;
+    overflow: hidden;
+    border: 3px solid rgba(201,147,58,0.4);
+    box-shadow: 0 24px 64px rgba(0,0,0,0.4), 0 0 0 1px rgba(255,255,255,0.08);
+    background: rgba(255,255,255,0.06);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeDown 0.8s 0.35s ease both;
+  }
+
+  .hero-product-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  @keyframes fadeDown {
+    from { opacity: 0; transform: translateY(-16px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ── SECTIONS SHARED ── */
+  section { padding: 90px 24px; }
+
+  .container { max-width: 800px; margin: 0 auto; }
+  .container-wide { max-width: 1060px; margin: 0 auto; }
+
+  .section-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--berry);
+    margin-bottom: 16px;
+    display: block;
+  }
+
+  h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(30px, 5vw, 48px);
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--deep-purple);
+    margin-bottom: 20px;
+  }
+
+  h2 em { font-style: italic; color: var(--berry); }
+
+  /* ── PAIN SECTION ── */
+  .pain-section {
+    background: var(--white);
+    border-top: 4px solid var(--light-purple);
+  }
+
+  .pain-intro {
+    font-size: 20px;
+    color: var(--mid-purple);
+    font-weight: 600;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    margin-bottom: 40px;
+    line-height: 1.5;
+  }
+
+  .pain-list { list-style: none; margin-bottom: 44px; }
+
+  .pain-list li {
+    display: flex;
+    gap: 16px;
+    padding: 18px 0;
+    border-bottom: 1px solid var(--light-purple);
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text);
+    align-items: flex-start;
+  }
+
+  .pain-list li:last-child { border-bottom: none; }
+
+  .pain-icon {
+    font-size: 20px;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .pain-block {
+    background: linear-gradient(135deg, var(--light-purple), #F5EEFF);
+    border-left: 4px solid var(--mid-purple);
+    border-radius: 0 12px 12px 0;
+    padding: 28px 32px;
+    margin: 36px 0;
+  }
+
+  .pain-block p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: var(--text);
+    margin-bottom: 10px;
+  }
+
+  .pain-block p:last-child { margin-bottom: 0; }
+
+  .pain-block strong { color: var(--mid-purple); }
+
+  .not-fault {
+    text-align: center;
+    background: linear-gradient(135deg, var(--deep-purple), var(--mid-purple));
+    border-radius: 16px;
+    padding: 40px 32px;
+    margin: 44px 0 0;
+  }
+
+  .not-fault p {
+    color: rgba(255,255,255,0.85);
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 10px;
+  }
+
+  .not-fault strong {
+    color: var(--gold);
+    font-size: 22px;
+    font-family: 'Playfair Display', serif;
+    display: block;
+    margin-bottom: 16px;
+  }
+
+  /* ── BULLETS SECTION ── */
+  .bullets-section {
+    background: linear-gradient(180deg, var(--cream) 0%, var(--light-purple) 100%);
+  }
+
+  .bullets-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin: 44px 0;
+  }
+
+  @media (max-width: 640px) { .bullets-grid { grid-template-columns: 1fr; } }
+
+  .bullet-card {
+    background: var(--white);
+    border-radius: 16px;
+    padding: 28px 24px;
+    box-shadow: 0 2px 20px rgba(45,27,105,0.08);
+    border: 1px solid rgba(91,45,142,0.12);
+    transition: transform 0.25s, box-shadow 0.25s;
+  }
+
+  .bullet-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 32px rgba(45,27,105,0.14);
+  }
+
+  .bullet-check {
+    width: 36px;
+    height: 36px;
+    background: linear-gradient(135deg, var(--mid-purple), var(--berry));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 16px;
+    margin-bottom: 14px;
+    flex-shrink: 0;
+  }
+
+  .bullet-card h3 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--deep-purple);
+    margin-bottom: 8px;
+    line-height: 1.4;
+  }
+
+  .bullet-card p {
+    font-size: 14px;
+    color: #5a5070;
+    line-height: 1.6;
+  }
+
+  .bonus-card {
+    background: linear-gradient(135deg, var(--deep-purple), var(--berry));
+    color: white;
+    border-radius: 16px;
+    padding: 28px 32px;
+    text-align: center;
+    margin-top: 8px;
+  }
+
+  .bonus-card .bonus-label {
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 700;
+    margin-bottom: 12px;
+    display: block;
+  }
+
+  .bonus-card p {
+    color: rgba(255,255,255,0.9);
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  /* ── STORY SECTION ── */
+  .story-section { background: var(--white); }
+
+  .story-layout {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 60px;
+    align-items: start;
+  }
+
+  @media (max-width: 720px) {
+    .story-layout { grid-template-columns: 1fr; gap: 36px; }
+  }
+
+  .story-avatar {
+    text-align: center;
+    position: sticky;
+    top: 40px;
+  }
+
+  .avatar-circle {
+    width: 180px;
+    height: 180px;
+    background: linear-gradient(135deg, var(--light-purple), #E8D5F5);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 80px;
+    margin: 0 auto 20px;
+    border: 4px solid var(--mid-purple);
+    box-shadow: 0 8px 32px rgba(91,45,142,0.2);
+  }
+
+  .avatar-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--deep-purple);
+    margin-bottom: 6px;
+  }
+
+  .avatar-title {
+    font-size: 13px;
+    color: #8070A0;
+    line-height: 1.5;
+  }
+
+  .story-text p {
+    font-size: 16px;
+    line-height: 1.85;
+    color: var(--text);
+    margin-bottom: 20px;
+  }
+
+  .story-text p.story-highlight {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-style: italic;
+    color: var(--mid-purple);
+    border-left: 3px solid var(--gold);
+    padding-left: 20px;
+    margin: 32px 0;
+  }
+
+  .story-text strong { color: var(--deep-purple); font-weight: 600; }
+
+  /* ── SOCIAL PROOF ── */
+  .proof-section {
+    background: linear-gradient(180deg, var(--light-purple) 0%, var(--cream) 100%);
+  }
+
+  .testimonials {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+    margin: 48px 0;
+  }
+
+  .testimonial-card {
+    background: var(--white);
+    border-radius: 16px;
+    padding: 28px 24px;
+    box-shadow: 0 4px 24px rgba(45,27,105,0.08);
+    border: 1px solid rgba(91,45,142,0.1);
+    position: relative;
+  }
+
+  .testimonial-card::before {
+    content: '"';
+    font-family: 'Playfair Display', serif;
+    font-size: 72px;
+    color: var(--light-purple);
+    position: absolute;
+    top: 8px;
+    left: 20px;
+    line-height: 1;
+  }
+
+  .testimonial-stars {
+    color: var(--gold);
+    font-size: 14px;
+    margin-bottom: 12px;
+    padding-top: 20px;
+  }
+
+  .testimonial-text {
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--text);
+    margin-bottom: 20px;
+    font-style: italic;
+  }
+
+  .testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .author-avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--mid-purple), var(--berry));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 700;
+    font-size: 16px;
+    flex-shrink: 0;
+  }
+
+  .author-info .name {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--deep-purple);
+  }
+
+  .author-info .role {
+    font-size: 12px;
+    color: #8070A0;
+  }
+
+  .stats-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin: 48px 0 0;
+    text-align: center;
+  }
+
+  @media (max-width: 560px) { .stats-row { grid-template-columns: 1fr; } }
+
+  .stat-item {
+    background: var(--white);
+    border-radius: 16px;
+    padding: 32px 20px;
+    box-shadow: 0 2px 16px rgba(45,27,105,0.07);
+  }
+
+  .stat-number {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    font-weight: 900;
+    color: var(--mid-purple);
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+
+  .stat-label {
+    font-size: 13px;
+    color: #7060A0;
+    line-height: 1.5;
+  }
+
+  /* ── PS SECTION ── */
+  .ps-section {
+    background: linear-gradient(135deg, var(--deep-purple) 0%, #1A0E50 100%);
+    text-align: center;
+    padding: 90px 24px;
+  }
+
+  .ps-section .ps-label {
+    font-size: 13px;
+    color: var(--gold);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 24px;
+    display: block;
+  }
+
+  .ps-section h2 {
+    color: var(--white);
+    font-size: clamp(28px, 4vw, 48px);
+    margin-bottom: 20px;
+  }
+
+  .ps-section h2 em { color: var(--gold); }
+
+  .ps-section p {
+    color: rgba(255,255,255,0.75);
+    font-size: 17px;
+    line-height: 1.8;
+    max-width: 600px;
+    margin: 0 auto 16px;
+  }
+
+  .ps-checklist {
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 36px 0 44px;
+  }
+
+  .ps-check {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: rgba(255,255,255,0.9);
+    font-size: 15px;
+    font-weight: 500;
+  }
+
+  .ps-check-icon {
+    width: 28px;
+    height: 28px;
+    background: var(--gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    flex-shrink: 0;
+  }
+
+  .guarantee-box {
+    display: inline-flex;
+    align-items: center;
+    gap: 20px;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(201,147,58,0.35);
+    border-radius: 16px;
+    padding: 20px 32px;
+    margin-top: 16px;
+    text-align: left;
+  }
+
+  .guarantee-icon { font-size: 42px; }
+
+  .guarantee-text .g-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    color: var(--gold);
+    margin-bottom: 4px;
+  }
+
+  .guarantee-text p {
+    color: rgba(255,255,255,0.7);
+    font-size: 13px;
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  /* ── DIVIDER ── */
+  .section-divider {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 48px;
+  }
+
+  .section-divider::before,
+  .section-divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(91,45,142,0.25), transparent);
+  }
+
+  .divider-icon { font-size: 20px; }
+
+  /* ── CTA CENTERED ── */
+  .cta-center {
+    text-align: center;
+    margin-top: 48px;
+  }
+
+  .cta-note {
+    display: block;
+    font-size: 13px;
+    color: #8070A0;
+    margin-top: 14px;
+  }
+
+  .cta-note-white {
+    display: block;
+    font-size: 13px;
+    color: rgba(255,255,255,0.5);
+    margin-top: 14px;
+  }
+
+  /* ── SCROLLBAR ── */
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: var(--cream); }
+  ::-webkit-scrollbar-thumb { background: var(--mid-purple); border-radius: 3px; }
+
+  /* ── FADE IN ON SCROLL ── */
+  .reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════
+     HERO
+══════════════════════════════════════════ -->
+<section class="hero">
+  <div class="hero-inner">
+    <!-- COLOANA STÂNGA: Headline + CTA -->
+    <div class="hero-content">
+      <div class="hero-badge">🫐 Supliment Imunitar · Bazat pe Știință · 4.8/5 Stele</div>
+
+      <h1>
+        Te îmbolnăvești de 2–3 ori<br>în fiecare sezon rece?<br>
+        <span style="color:#FFE44D; font-style:italic;">Construiește o rutină zilnică<br>care îți susține imunitatea.</span>
+      </h1>
+
+      <p class="hero-sub">
+        Fără pastile greu de înghițit.<br>
+        Fără siropuri cu gust neplăcut.<br>
+        <strong>Un jeleu pe zi — simplu, consecvent, plăcut.</strong>
+      </p>
+
+      <a href="https://snapsupplements.com/products/elderberry_gummies" class="cta-btn">🛒 Comandă acum și începe rutina de 4–6 săptămâni →</a>
+
+      <div class="hero-trust">
+        <div class="trust-item"><span>✅</span> Aprobat de Nutriționiști</div>
+        <div class="trust-item"><span>🌿</span> Non-OMG · Fără Alergeni</div>
+        <div class="trust-item"><span>🛡️</span> Garanție 90 Zile</div>
+        <div class="trust-item"><span>⭐</span> 4.8/5 Stele</div>
+      </div>
+    </div>
+
+    <!-- COLOANA DREAPTA: Imagine produs -->
+    <div class="hero-image-col">
+      <div class="hero-image-wrapper">
+        <img src="https://snapsupplements.com/cdn/shop/files/product_image_60_222d75f6-1b27-4fd4-8d2d-3c647cdd59e4.png?v=1745016659&width=1000" alt="Snap Supplements Elderberry Gummies" class="hero-product-img" />
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════
+     PAIN SECTION
+══════════════════════════════════════════ -->
+<section class="pain-section">
+  <div class="container">
+    <div class="reveal">
+      <span class="section-label">Te recunoști în asta?</span>
+      <h2>Știu <em>exact</em> cum te simți…</h2>
+      <p class="pain-intro">
+        Ai investit timp, energie și bani în suplimente imuniare. Și totuși — în fiecare iarnă, același rezultat.
+      </p>
+    </div>
+
+    <ul class="pain-list reveal">
+      <li>
+        <span class="pain-icon">💊</span>
+        <span>Ai încercat <strong>vitamine C, zinc, pastile imuniare</strong> din farmacie — le-ai luat câteva zile, ai uitat de ele, și nu ai simțit nicio diferență vizibilă.</span>
+      </li>
+      <li>
+        <span class="pain-icon">🤮</span>
+        <span>Ai urmat sfaturi de tip „ia siropul acesta de soc" — dar gustul era atât de oribil încât ai renunțat după 3 zile, înainte ca orice beneficiu real să se acumuleze.</span>
+      </li>
+      <li>
+        <span class="pain-icon">😤</span>
+        <span>Ai cheltuit zeci sau sute de lei pe produse care <strong>promit și nu livrează</strong> — și ai ajuns să crezi că pur și simplu ești „genul de om care se îmbolnăvește mereu".</span>
+      </li>
+      <li>
+        <span class="pain-icon">⏰</span>
+        <span>Prima răceală te dărâmă o săptămână întreagă — <strong>zile de muncă pierdute</strong>, weekenduri anulate cu familia, energie zero pentru ce contează cu adevărat.</span>
+      </li>
+      <li>
+        <span class="pain-icon">😞</span>
+        <span>Te simți vinovat că nu faci suficient pentru sănătatea ta, deși știi că duci un stil de viață în general sănătos. <strong>Corpul tău parcă te trădează.</strong></span>
+      </li>
+    </ul>
+
+    <div class="pain-block reveal">
+      <p>Și în tot acest timp te-ai întrebat de ce:</p>
+      <p><strong>Pierzi progresul</strong> de fiecare dată când ai prins un ritm… și o singură răceală îți dărâmă totul.</p>
+      <p><strong>Pierzi timp și bani</strong> pe suplimente care nu devin niciodată un obicei real.</p>
+      <p><strong>Fiecare expert spune altceva</strong> — și nu mai știi cui să ai încredere.</p>
+      <p>Oricât ai încerca, imunitatea stabilă pare mereu la un pas distanță.</p>
+    </div>
+
+    <div class="not-fault reveal">
+      <strong>Sună familiar? Nu ești singur — și nu este vina ta.</strong>
+      <p>Motivul real pentru care ai eșuat nu a fost niciodată lipsa ta de voință sau ingredientele greșite.</p>
+      <p>A fost <strong>formatul</strong>. Niciun supliment cu gust oribil sau sub formă de pastilă nu poate deveni un obicei zilnic real. Și fără consecvență de 4-6 săptămâni, niciun ingredient — oricât de bun — nu poate construi o apărare imunitară reală.</p>
+      <p>De aceea am creat o soluție complet diferită.</p>
+    </div>
+
+    <div class="cta-center reveal">
+      <a href="https://snapsupplements.com/products/elderberry_gummies" class="cta-btn">🫐 Descoperă Soluția Acum →</a>
+      <span class="cta-note">Garanție completă 90 de zile · Livrare gratuită peste 50 USD</span>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════
+     BULLETS SECTION
+══════════════════════════════════════════ -->
+<section class="bullets-section">
+  <div class="container-wide">
+    <div class="reveal" style="text-align:center; max-width:640px; margin:0 auto 0;">
+      <span class="section-label">Ce vei descoperi</span>
+      <h2>Ce face <em>Snap Supplements Elderberry Gummies</em> diferit față de orice ai încercat</h2>
+    </div>
+
+    <div class="bullets-grid reveal">
+      <div class="bullet-card">
+        <div class="bullet-check">✓</div>
+        <h3>Cum să îți construiești o apărare imunitară reală în 4-6 săptămâni — chiar dacă ai eșuat cu orice alt supliment</h3>
+        <p>Consecvența zilnică este singurul lucru care contează. Un jeleu gustos pe care îl aștepți în fiecare dimineață face imposibilă uitarea dozei.</p>
+      </div>
+
+      <div class="bullet-card">
+        <div class="bullet-check">✓</div>
+        <h3>De ce pastilele și siropurile clasice îți sabotează de fapt imunitatea — și ce să faci în schimb</h3>
+        <p>Formatul greșit = inconsecvență = zero rezultate. Descoperă de ce 9 din 10 oameni renunță la suplimentele clasice înainte de fereastra de eficacitate.</p>
+      </div>
+
+      <div class="bullet-card">
+        <div class="bullet-check">✓</div>
+        <h3>3 motive pentru care Socul Negru + Echinaceea sunt susținute de studii clinice reale — nu marketing</h3>
+        <p>Ingrediente cu dovezi știintifice documentate care explică DE CE funcționează — nu promisiuni vagi de „boost imunitar".</p>
+      </div>
+
+      <div class="bullet-card">
+        <div class="bullet-check">✓</div>
+        <h3>Cum să implementezi această rutină fără niciun efort suplimentar în ziua ta deja aglomerată</h3>
+        <p>Un singur jeleu pe zi. Nicio pregătire, nicio corvoadă, nicio scuză. Se integrează natural în rutina ta de dimineață ca o mică recompensă.</p>
+      </div>
+
+      <div class="bullet-card">
+        <div class="bullet-check">✓</div>
+        <h3>Cel mai simplu mod de a rămâne consecvent și a nu mai renunța niciodată după câteva zile</h3>
+        <p>Când produsul e gustos și convenabil, consecvența devine automată. Fără alarmă, fără reminder, fără forțat.</p>
+      </div>
+
+      <div class="bullet-card">
+        <div class="bullet-check">✓</div>
+        <h3>De ce oamenii care stivuiesc Elderberry cu rutinele de colagen și greens raportează mai multă energie vizibilă</h3>
+        <p>Snap Supplements se combină perfect cu alte rutine de wellness pentru un efect holistic și o energie constantă pe tot parcursul zilei.</p>
+      </div>
+    </div>
+
+    <div class="bonus-card reveal">
+      <span class="bonus-label">🎁 Plus Bonus</span>
+      <p><strong style="color:var(--gold); font-size:18px;">Garanție de 90 de Zile — Testare Complet Fără Risc</strong><br>
+      Dacă în 90 de zile nu simți o diferență reală în imunitatea și energia ta, primești banii înapoi integral. Zero întrebări, zero bătaie de cap.</p>
+    </div>
+
+    <div class="cta-center reveal">
+      <a href="https://snapsupplements.com/products/elderberry_gummies" class="cta-btn">🛒 Obține Acces Instant →</a>
+      <span class="cta-note">Non-OMG · Fără Alergeni · Verificat Știintific</span>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════
+     STORY SECTION
+══════════════════════════════════════════ -->
+<section class="story-section">
+  <div class="container">
+    <div class="reveal" style="text-align:center; margin-bottom:56px;">
+      <span class="section-label">Povestea din spate</span>
+      <h2>Cine suntem și de ce ar trebui să ne asculți?</h2>
+    </div>
+
+    <div class="story-layout">
+      <div class="story-avatar reveal">
+        <div class="avatar-circle">🫐</div>
+        <div class="avatar-name">Snap Supplements</div>
+        <div class="avatar-title">Wellness bazat pe știință<br>Denver, Colorado</div>
+      </div>
+
+      <div class="story-text reveal">
+        <p>Obișnuiam să ne îmbolnăvim în fiecare iarnă. Ca oricine altcineva — și ca tine, probabil.</p>
+
+        <p>Am testat zeci de suplimente imuniare pe piață. Vitamine C megadoze, zinc, siropuri de soc, pastile de echinacea, extracte ambalate în capsule uriașe. <strong>Toate promițând același lucru. Niciunul livrând consecvența necesară.</strong></p>
+
+        <p>De ce? Nu din cauza ingredientelor. Din cauza formatului.</p>
+
+        <p class="story-highlight">
+          „Oamenii nu renunță la suplimentele imuniare pentru că nu funcționează. Renunță pentru că nu le place să le ia. Și dacă nu le iei zilnic 4-6 săptămâni, niciun ingredient din lume nu te poate ajuta."
+        </p>
+
+        <p>Aceasta a fost revelația care a schimbat totul. Ne-am întrebat: <strong>Ce-ar fi dacă am crea un supliment imunitar pe care oamenii îl iau cu plăcere în fiecare zi?</strong></p>
+
+        <p>Răspunsul: <strong>Snap Supplements Elderberry Gummies.</strong> Extract de Soc Negru + Echinacea, dovedite clinic, într-un jeleu atât de gustos încât devine parte din rutina de dimineață la fel de natural ca și cafeaua.</p>
+
+        <p>Astăzi, <strong>mii de oameni</strong> au reușit să își mențină rutina zilnică pe tot parcursul sezonului rece — nu pentru că au găsit ingrediente mai bune, ci pentru că au găsit în sfârșit un format pe care îl pot respecta zilnic.</p>
+
+        <p>Dacă ei au reușit, poți și tu.</p>
+      </div>
+    </div>
+
+    <div class="cta-center reveal">
+      <a href="https://snapsupplements.com/products/elderberry_gummies" class="cta-btn">🫐 Încearcă Snap Elderberry Gummies →</a>
+      <span class="cta-note">Livrare gratuită · Garanție 90 zile · Fără risc</span>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════
+     SOCIAL PROOF
+══════════════════════════════════════════ -->
+<section class="proof-section">
+  <div class="container-wide">
+    <div class="reveal" style="text-align:center; max-width:600px; margin:0 auto 0;">
+      <span class="section-label">Rezultate Reale</span>
+      <h2>Ce spun oamenii care l-au <em>încercat deja</em></h2>
+    </div>
+
+    <div class="testimonials reveal">
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">„M-am simțit mult mai susținută în sezonul rece. Am reușit să respect rutina zilnic pentru prima dată — jeleul chiar face ca obiceiul să se formeze de la sine."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">T</div>
+          <div class="author-info">
+            <div class="name">Tanya M.</div>
+            <div class="role">Mamă a doi copii · Verified Buyer</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">„Pentru prima dată am reușit să respect rutina zilnic. Gustul este atât de bun încât nu mai am nicio scuză să sar peste doză."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">C</div>
+          <div class="author-info">
+            <div class="name">Clarissa R.</div>
+            <div class="role">Profesionistă ocupată · Verified Buyer</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">„M-am simțit mult mai bine susținută pe tot parcursul sezonului rece. Am recomandat deja la toți prietenii mei — simplu, gustos și ușor de respectat zilnic."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">T</div>
+          <div class="author-info">
+            <div class="name">Tanique B.</div>
+            <div class="role">Fitness Enthusiast · Verified Buyer</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="stats-row reveal">
+      <div class="stat-item">
+        <div class="stat-number">4.8<span style="font-size:28px;">/5</span></div>
+        <div class="stat-label">Rating Mediu<br>din Recenzii Verificate</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">90</div>
+        <div class="stat-label">Zile Garanție<br>Completă Fără Risc</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">🫐</div>
+        <div class="stat-label">Soc Negru + Echinacea<br>Susținute Clinic</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════
+     URGENCY SECTION
+══════════════════════════════════════════ -->
+<section style="background: #FDF8F0; padding: 70px 24px; border-top: 3px solid #EDE5F7;">
+  <div style="max-width: 720px; margin: 0 auto; text-align: center;" class="reveal">
+    <span style="font-size:11px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:#9B2D5A; display:block; margin-bottom:16px;">⏳ De ce contează momentul</span>
+    <h2 style="font-family:'Playfair Display',serif; font-size:clamp(26px,4vw,40px); color:#2D1B69; margin-bottom:24px; line-height:1.3;">Imunitatea nu se construiește<br><em style="color:#9B2D5A;">peste noapte.</em></h2>
+    <p style="font-size:17px; line-height:1.85; color:#2C2040; margin-bottom:16px;">Majoritatea oamenilor încep să caute soluții după ce deja s-au îmbolnăvit.</p>
+    <p style="font-size:17px; line-height:1.85; color:#2C2040; margin-bottom:16px;">Dar ingredientele naturale au nevoie de <strong>4–6 săptămâni de consecvență</strong> pentru a susține sistemul imunitar.</p>
+    <p style="font-size:17px; line-height:1.85; color:#2C2040;">Dacă sezonul rece se apropie, <strong>acum este momentul potrivit să începi.</strong></p>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     PS + FINAL CTA
+══════════════════════════════════════════ -->
+<section class="ps-section">
+  <div class="container reveal">
+    <span class="ps-label">P.S. — Dacă ai ajuns până aici</span>
+
+    <h2>Iată varianta scurtă:<br><em>Este simplu. Și când ceva este simplu, îl respecți.</em></h2>
+
+    <p>
+      <strong style="color:white;">Snap Supplements Elderberry Gummies</strong> te ajută să îți construiești o apărare imunitară reală
+      — fără pastile cu gust oribil, fără siropuri zaharoase și fără să te forțezi să respecți o rutină neplăcută.
+    </p>
+
+    <div class="ps-checklist">
+      <div class="ps-check">
+        <div class="ps-check-icon">✓</div>
+        <span>E gustos — îl aștepți zilnic</span>
+      </div>
+      <div class="ps-check">
+        <div class="ps-check-icon">✓</div>
+        <span>E simplu — un jeleu pe zi</span>
+      </div>
+      <div class="ps-check">
+        <div class="ps-check-icon">✓</div>
+        <span>Funcționează — chiar și dacă ai mai eșuat</span>
+      </div>
+    </div>
+
+    <div class="guarantee-box">
+      <div class="guarantee-icon">🛡️</div>
+      <div class="guarantee-text">
+        <div class="g-title">Garanție 90 Zile — Zero Risc</div>
+        <p>Dacă nu simți diferența în imunitate și energie, primești banii înapoi integral.<br>Nicio întrebare, nicio bătaie de cap.</p>
+      </div>
+    </div>
+
+    <div class="cta-center" style="margin-top:44px;">
+      <a href="https://snapsupplements.com/products/elderberry_gummies" class="cta-btn" style="font-size:18px; padding:20px 52px;">
+        🫐 Comandă Snap Elderberry Gummies Acum →
+      </a>
+      <span class="cta-note-white">Livrare gratuită peste 50 USD · Non-OMG · Fără Alergeni · Certificat HSA/FSA</span>
+    </div>
+  </div>
+</section>
+
+
+<script>
+  // Reveal on scroll
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  reveals.forEach(el => observer.observe(el));
+</script>
+
+<!-- DISCLAIMER -->
+<section style="background: #F5F0F8; padding: 32px 24px; border-top: 1px solid #DDD5EE;">
+  <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+    <p style="font-size:13px; color:#7060A0; line-height:1.8; font-style:italic;">
+      *Acest produs este un supliment alimentar și nu înlocuiește sfatul medical.
+      Declarațiile prezentate nu au fost evaluate pentru diagnosticarea, tratarea sau prevenirea vreunei boli.
+      Consultă medicul înainte de utilizare dacă ai o condiție medicală.
+    </p>
+  </div>
+</section>
+
+</body>
+</html>

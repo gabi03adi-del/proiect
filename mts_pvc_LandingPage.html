@@ -1,0 +1,1371 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MTS PVC — Tâmplărie Premium Salamander & Ramplast</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --steel: #0C1B2E;
+  --steel-mid: #162A44;
+  --steel-bright: #2356A0;
+  --steel-pale: #EEF3F8;
+  --gold: #C8891E;
+  --gold-light: #E8AA40;
+  --gold-pale: #FDF6EC;
+  --white: #FFFFFF;
+  --off-white: #F5F7FA;
+  --text: #18293C;
+  --text-light: #546A82;
+  --red-accent: #C0341A;
+  --warm: #FAF8F5;
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--off-white);
+  color: var(--text);
+  overflow-x: hidden;
+}
+
+/* ══ HERO ══ */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: var(--steel);
+}
+
+/* ── SVG curtain wall background ── */
+.hero-curtain-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.hero-curtain-bg svg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    105deg,
+    rgba(10,22,38,0.97) 0%,
+    rgba(12,27,46,0.88) 45%,
+    rgba(15,35,58,0.55) 75%,
+    rgba(12,27,46,0.2) 100%
+  );
+  z-index: 1;
+}
+
+.hero-glow {
+  position: absolute;
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(ellipse, rgba(200,137,30,0.14) 0%, transparent 65%);
+  top: -200px;
+  right: -80px;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 110px 48px 90px;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(200,137,30,0.1);
+  border: 1px solid rgba(200,137,30,0.45);
+  color: var(--gold-light);
+  font-size: 10.5px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  padding: 8px 20px;
+  border-radius: 3px;
+  margin-bottom: 40px;
+  font-weight: 500;
+  animation: fadeUp 0.7s ease both;
+}
+
+.hero-badge::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: var(--gold);
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.25} }
+
+.hero-eyebrow {
+  font-size: 13px;
+  font-weight: 400;
+  color: rgba(255,255,255,0.38);
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+  animation: fadeUp 0.8s ease both;
+  animation-delay: 0.08s;
+}
+
+.hero h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(3.8rem, 8.5vw, 7.5rem);
+  color: var(--white);
+  line-height: 0.93;
+  letter-spacing: 2px;
+  margin-bottom: 6px;
+  animation: fadeUp 0.9s ease both;
+  animation-delay: 0.14s;
+}
+
+.hero h1 .gold { color: var(--gold); display: block; }
+.hero h1 .thin { font-size: 0.65em; font-family: 'Playfair Display', serif; font-weight: 400; letter-spacing: 4px; color: rgba(255,255,255,0.55); display: block; font-style: italic; margin-bottom: 10px; }
+
+.hero-sub {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.05rem, 2vw, 1.35rem);
+  color: rgba(255,255,255,0.72);
+  font-style: italic;
+  line-height: 1.65;
+  max-width: 620px;
+  margin: 28px 0 20px;
+  animation: fadeUp 0.9s ease both;
+  animation-delay: 0.2s;
+}
+
+.hero-pain {
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.48);
+  max-width: 560px;
+  line-height: 1.75;
+  margin-bottom: 40px;
+  font-weight: 300;
+  animation: fadeUp 0.9s ease both;
+  animation-delay: 0.26s;
+}
+
+/* Urgency strip */
+.urgency-strip {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(192,52,26,0.12);
+  border: 1px solid rgba(192,52,26,0.35);
+  color: #E86040;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 8px 18px;
+  border-radius: 3px;
+  margin-bottom: 32px;
+  letter-spacing: 0.5px;
+  animation: fadeUp 0.9s ease both;
+  animation-delay: 0.3s;
+}
+.urgency-strip::before { content: '⚠'; font-size: 14px; }
+
+.hero-cta-row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  animation: fadeUp 0.9s ease both;
+  animation-delay: 0.35s;
+}
+
+.btn-hero {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+  color: var(--steel);
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 0.3px;
+  padding: 20px 48px;
+  border-radius: 3px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 8px 32px rgba(200,137,30,0.45);
+}
+.btn-hero:hover { transform: translateY(-2px); box-shadow: 0 14px 40px rgba(200,137,30,0.6); }
+.btn-hero::after { content: ' →'; }
+
+.hero-note { font-size: 11.5px; color: rgba(255,255,255,0.28); letter-spacing: 0.5px; }
+
+.hero-stats {
+  display: flex;
+  gap: 52px;
+  margin-top: 68px;
+  padding-top: 40px;
+  border-top: 1px solid rgba(255,255,255,0.07);
+  flex-wrap: wrap;
+  animation: fadeUp 0.9s ease both;
+  animation-delay: 0.42s;
+}
+
+.stat { display: flex; flex-direction: column; gap: 4px; }
+
+.stat-num {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 3rem;
+  color: var(--gold);
+  letter-spacing: 2px;
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 11px;
+  color: rgba(255,255,255,0.35);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  line-height: 1.4;
+}
+
+.scroll-hint {
+  position: absolute;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgba(255,255,255,0.18);
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  z-index: 3;
+  animation: bounce 2.5s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0%,100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(6px); }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(22px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ══ SECTIONS ══ */
+section { padding: 92px 24px; }
+.container { max-width: 860px; margin: 0 auto; }
+.container-wide { max-width: 1080px; margin: 0 auto; }
+
+.section-eyebrow {
+  font-size: 10.5px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 600;
+  margin-bottom: 14px;
+  display: block;
+}
+
+.section-h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 4vw, 2.9rem);
+  font-weight: 700;
+  color: var(--steel);
+  line-height: 1.2;
+  margin-bottom: 24px;
+}
+
+.section-h2 em { font-style: italic; font-weight: 400; color: var(--steel-bright); }
+
+.divider-gold {
+  width: 44px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--gold), var(--gold-light));
+  margin-bottom: 32px;
+  border-radius: 2px;
+}
+
+/* fade-up animation on scroll */
+.fade-up {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+.fade-up.visible { opacity: 1; transform: translateY(0); }
+
+/* ══ PAIN ══ */
+.pain-section { background: var(--warm); }
+
+.pain-intro {
+  font-size: 1.05rem;
+  line-height: 1.85;
+  color: var(--text-light);
+  margin-bottom: 34px;
+  font-weight: 300;
+}
+
+.pain-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 38px;
+}
+
+.pain-list li {
+  display: flex;
+  gap: 16px;
+  padding: 18px 22px;
+  background: var(--white);
+  border-left: 3px solid var(--steel-bright);
+  border-radius: 0 8px 8px 0;
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--text);
+  box-shadow: 0 2px 12px rgba(12,27,46,0.05);
+}
+
+.pain-list li .icon { font-size: 1.1rem; flex-shrink: 0; margin-top: 2px; }
+
+.scene-box {
+  background: linear-gradient(135deg, var(--steel) 0%, var(--steel-mid) 100%);
+  border-radius: 12px;
+  padding: 36px 40px;
+  margin-bottom: 38px;
+  border-left: 4px solid var(--gold);
+}
+
+.scene-box h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.25rem;
+  font-style: italic;
+  color: var(--gold-light);
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+.scene-box ul { list-style: none; display: flex; flex-direction: column; gap: 14px; }
+
+.scene-box li {
+  display: flex;
+  gap: 14px;
+  color: rgba(255,255,255,0.72);
+  font-size: 0.97rem;
+  line-height: 1.65;
+  font-weight: 300;
+}
+
+.scene-box li::before { content: '—'; color: var(--gold); flex-shrink: 0; font-weight: 700; }
+
+.not-fault {
+  background: var(--gold-pale);
+  border: 1px solid rgba(200,137,30,0.22);
+  border-radius: 8px;
+  padding: 24px 28px;
+  margin-bottom: 38px;
+}
+
+.not-fault p {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  font-style: italic;
+  color: var(--steel);
+  line-height: 1.75;
+}
+
+.center { text-align: center; }
+
+.btn-section {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--steel);
+  color: var(--white);
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 17px 42px;
+  border-radius: 3px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 20px rgba(12,27,46,0.25);
+}
+.btn-section:hover { background: var(--steel-mid); transform: translateY(-2px); box-shadow: 0 8px 28px rgba(12,27,46,0.35); }
+.btn-section::after { content: ' →'; }
+
+.btn-note-dark {
+  display: block;
+  margin-top: 12px;
+  font-size: 11.5px;
+  color: var(--text-light);
+  letter-spacing: 0.5px;
+}
+
+/* ══ BULLETS ══ */
+.bullets-section {
+  background: linear-gradient(160deg, #0C1B2E 0%, #162A44 60%, #0E2038 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Geometric window pattern overlay */
+.bullets-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(46,90,162,0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(46,90,162,0.07) 1px, transparent 1px);
+  background-size: 44px 44px;
+}
+
+.bullets-section .section-h2 { color: var(--white); }
+.bullets-section .section-h2 em { color: var(--gold-light); }
+.bullets-section .section-eyebrow { color: var(--gold-light); }
+
+.bullets-intro {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  font-style: italic;
+  color: rgba(255,255,255,0.45);
+  margin-bottom: 44px;
+}
+
+.bullets-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 52px;
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 640px) { .bullets-grid { grid-template-columns: 1fr; } }
+
+.bullet-card {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 8px;
+  padding: 26px 24px;
+  transition: background 0.25s, border-color 0.25s, transform 0.25s;
+}
+
+.bullet-card:hover {
+  background: rgba(35,86,160,0.12);
+  border-color: rgba(200,137,30,0.35);
+  transform: translateY(-3px);
+}
+
+.bullet-check {
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+  display: block;
+  color: var(--gold);
+}
+
+.bullet-card p {
+  color: rgba(255,255,255,0.75);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  font-weight: 300;
+}
+
+.bullet-card strong { color: var(--gold-light); font-weight: 600; }
+
+.btn-note {
+  display: block;
+  margin-top: 12px;
+  font-size: 11.5px;
+  color: rgba(255,255,255,0.28);
+  letter-spacing: 0.5px;
+}
+
+/* ══ SPECS ══ */
+.specs-section { background: var(--white); }
+
+.specs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+@media (max-width: 700px) { .specs-grid { grid-template-columns: 1fr; } }
+
+.spec-card {
+  border: 1.5px solid rgba(30,58,95,0.1);
+  border-radius: 10px;
+  padding: 30px 26px;
+  background: var(--off-white);
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+}
+
+.spec-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 36px rgba(12,27,46,0.1);
+  border-color: var(--gold);
+}
+
+.spec-icon { font-size: 1.8rem; margin-bottom: 14px; display: block; }
+
+.spec-name {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.25rem;
+  color: var(--steel);
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+.spec-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--gold);
+  margin-bottom: 10px;
+  line-height: 1;
+}
+
+.spec-desc {
+  font-size: 13.5px;
+  color: var(--text-light);
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+/* ══ STORY ══ */
+.story-section { background: var(--warm); }
+
+.story-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.8fr;
+  gap: 68px;
+  align-items: start;
+}
+
+@media (max-width: 700px) { .story-layout { grid-template-columns: 1fr; gap: 44px; } }
+
+.story-photo-wrap {
+  background: linear-gradient(145deg, var(--steel) 0%, var(--steel-mid) 100%);
+  border-radius: 12px;
+  aspect-ratio: 4/5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.story-photo-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.story-photo-placeholder { font-size: 4.5rem; color: rgba(200,137,30,0.18); }
+
+.story-visual { position: relative; }
+
+.story-badge-float {
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  background: var(--gold);
+  color: var(--steel);
+  padding: 14px 20px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 8px 28px rgba(200,137,30,0.45);
+}
+
+.story-badge-float .num {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2.2rem;
+  line-height: 1;
+}
+
+.story-badge-float .lbl {
+  font-size: 9.5px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-weight: 700;
+  opacity: 0.75;
+}
+
+.story-text p {
+  font-size: 1rem;
+  line-height: 1.85;
+  color: var(--text-light);
+  margin-bottom: 18px;
+  font-weight: 300;
+}
+
+.story-text p strong { color: var(--text); font-weight: 600; }
+
+.story-quote {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  font-style: italic;
+  color: var(--steel);
+  border-left: 4px solid var(--gold);
+  padding: 16px 22px;
+  margin: 28px 0;
+  background: var(--gold-pale);
+  border-radius: 0 8px 8px 0;
+  line-height: 1.65;
+}
+
+.cert-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+
+.cert-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--steel-pale);
+  border: 1px solid rgba(30,58,95,0.14);
+  color: var(--steel-mid);
+  padding: 8px 16px;
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.cert-pill::before { content: '✓'; color: var(--gold); font-weight: 700; }
+
+/* ══ TESTIMONIALS ══ */
+.testimonials-section { background: var(--off-white); }
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 52px;
+}
+
+@media (max-width: 640px) { .testimonials-grid { grid-template-columns: 1fr; } }
+
+.testimonial-card {
+  background: var(--white);
+  border: 1px solid rgba(30,58,95,0.1);
+  border-radius: 10px;
+  padding: 30px 26px;
+  position: relative;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.testimonial-card:hover { transform: translateY(-3px); box-shadow: 0 12px 36px rgba(12,27,46,0.1); }
+
+.stars { color: var(--gold); font-size: 1rem; margin-bottom: 14px; letter-spacing: 2px; }
+
+.testimonial-text {
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: var(--text-light);
+  margin-bottom: 18px;
+  font-style: italic;
+  font-weight: 300;
+}
+
+.testimonial-author { font-weight: 600; color: var(--steel); font-size: 13px; letter-spacing: 0.5px; }
+.testimonial-author span { color: var(--text-light); font-weight: 300; font-size: 12px; }
+
+/* Placeholder disclaimer */
+.proof-note {
+  background: rgba(200,137,30,0.07);
+  border: 1px dashed rgba(200,137,30,0.35);
+  border-radius: 6px;
+  padding: 12px 18px;
+  font-size: 12px;
+  color: var(--text-light);
+  text-align: center;
+  margin-bottom: 36px;
+  font-style: italic;
+}
+
+/* ══ CTA ══ */
+.cta-section {
+  background: linear-gradient(135deg, var(--steel) 0%, #162A44 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(46,90,142,0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(46,90,142,0.07) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+.cta-inner { position: relative; z-index: 1; text-align: center; }
+
+.cta-headline {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(2.8rem, 6.5vw, 5.2rem);
+  color: var(--white);
+  letter-spacing: 2px;
+  line-height: 0.93;
+  margin-bottom: 26px;
+}
+
+.cta-headline span { color: var(--gold); display: block; }
+
+.cta-sub {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 1.2rem;
+  color: rgba(255,255,255,0.55);
+  margin-bottom: 44px;
+  max-width: 560px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.65;
+}
+
+.cta-checks {
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 44px;
+}
+
+.cta-check {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: rgba(255,255,255,0.8);
+  font-size: 14px;
+}
+
+.cta-check::before { content: '✓'; color: var(--gold); font-weight: 700; font-size: 16px; }
+
+/* ══ PS ══ */
+.ps-section { background: var(--white); }
+
+.ps-box {
+  background: linear-gradient(135deg, var(--steel) 0%, #162A44 100%);
+  border-radius: 16px;
+  padding: 56px 48px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.ps-box::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(46,90,142,0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(46,90,142,0.07) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.ps-box > * { position: relative; z-index: 1; }
+
+.ps-label {
+  font-size: 10.5px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  margin-bottom: 22px;
+  display: block;
+  font-weight: 600;
+}
+
+.ps-headline {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.7rem, 4vw, 2.6rem);
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.3;
+  margin-bottom: 22px;
+}
+
+.ps-headline em { font-style: italic; font-weight: 400; color: var(--gold-light); }
+
+.ps-body {
+  color: rgba(255,255,255,0.5);
+  font-size: 1rem;
+  line-height: 1.75;
+  margin-bottom: 32px;
+  font-weight: 300;
+  max-width: 560px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ps-pills {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 36px;
+}
+
+.ps-pill {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(200,137,30,0.1);
+  border: 1px solid rgba(200,137,30,0.28);
+  color: var(--gold-light);
+  padding: 10px 20px;
+  border-radius: 3px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.ps-pill::before { content: '✓'; font-weight: 700; }
+
+/* ══ FOOTER ══ */
+footer {
+  background: #06101A;
+  padding: 48px 24px;
+  text-align: center;
+}
+
+footer p {
+  color: rgba(255,255,255,0.22);
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 2.1;
+}
+
+footer a { color: rgba(255,255,255,0.32); text-decoration: none; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  .hero-inner { padding: 90px 24px 70px; }
+  .hero-stats { gap: 32px; }
+  section { padding: 64px 20px; }
+  .ps-box { padding: 40px 28px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ══ HERO ══ -->
+<section class="hero" id="top">
+
+  <!-- Curtain Wall / Architectural Glass Background -->
+  <div class="hero-curtain-bg">
+    <svg viewBox="0 0 1400 900" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+      <defs>
+        <linearGradient id="glassShine" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#1a4a7a;stop-opacity:0.6"/>
+          <stop offset="50%" style="stop-color:#0d2b4a;stop-opacity:0.4"/>
+          <stop offset="100%" style="stop-color:#0a1e35;stop-opacity:0.8"/>
+        </linearGradient>
+        <linearGradient id="glassShine2" x1="100%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" style="stop-color:#2a6aaa;stop-opacity:0.3"/>
+          <stop offset="100%" style="stop-color:#0d2b4a;stop-opacity:0.5"/>
+        </linearGradient>
+        <linearGradient id="skyReflect" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" style="stop-color:#3a7ac8;stop-opacity:0.25"/>
+          <stop offset="60%" style="stop-color:#1a4a7a;stop-opacity:0.15"/>
+          <stop offset="100%" style="stop-color:#0a1e35;stop-opacity:0.4"/>
+        </linearGradient>
+        <filter id="softBlur">
+          <feGaussianBlur stdDeviation="0.5"/>
+        </filter>
+      </defs>
+
+      <!-- Background fill -->
+      <rect width="1400" height="900" fill="#0a1e35"/>
+
+      <!-- Main curtain wall grid — large format windows -->
+      <!-- Column 1 (far left partial) -->
+      <g opacity="0.9">
+        <rect x="-10" y="0" width="148" height="148" fill="url(#glassShine)" stroke="#1a3a5c" stroke-width="6"/>
+        <rect x="-10" y="154" width="148" height="148" fill="url(#skyReflect)" stroke="#1a3a5c" stroke-width="6"/>
+        <rect x="-10" y="308" width="148" height="148" fill="url(#glassShine2)" stroke="#1a3a5c" stroke-width="6"/>
+        <rect x="-10" y="462" width="148" height="148" fill="url(#glassShine)" stroke="#1a3a5c" stroke-width="6"/>
+        <rect x="-10" y="616" width="148" height="148" fill="url(#skyReflect)" stroke="#1a3a5c" stroke-width="6"/>
+        <rect x="-10" y="770" width="148" height="148" fill="url(#glassShine2)" stroke="#1a3a5c" stroke-width="6"/>
+      </g>
+
+      <!-- Column 2 -->
+      <g opacity="0.85">
+        <rect x="144" y="0" width="148" height="148" fill="url(#skyReflect)" stroke="#1a3a5c" stroke-width="6"/>
+        <rect x="144" y="154" width="148" height="148" fill="url(#glassShine)" stroke="#1a3a5c" stroke-width="6"/>
+        <rect x="144" y="308" width="148" height="148" fill="url(#skyReflect)" stroke="#1a3a5c" stroke-width="6"/>
+        <rect x="144" y="462" width="148" height="148" fill="url(#glassShine2)" stroke="#1a3a5c" stroke-width="6"/>
+        <rect x="144" y="616" width="148" height="148" fill="url(#glassShine)" stroke="#1a3a5c" stroke-width="6"/>
+        <rect x="144" y="770" width="148" height="148" fill="url(#skyReflect)" stroke="#1a3a5c" stroke-width="6"/>
+      </g>
+
+      <!-- Column 3 -->
+      <g opacity="0.75">
+        <rect x="298" y="0" width="148" height="148" fill="url(#glassShine2)" stroke="#1a3a5c" stroke-width="6"/>
+        <rect x="298" y="154" width="148" height="148" fill="url(#skyReflect)" stroke="#1a3a5c" stroke-width="6"/>
+        <rect x="298" y="308" width="148" height="148" fill="url(#glassShine)" stroke="#1a3a5c" stroke-width="6"/>
+        <rect x="298" y="462" width="148" height="148" fill="url(#skyReflect)" stroke="#1a3a5c" stroke-width="6"/>
+        <rect x="298" y="616" width="148" height="148" fill="url(#glassShine2)" stroke="#1a3a5c" stroke-width="6"/>
+        <rect x="298" y="770" width="148" height="148" fill="url(#glassShine)" stroke="#1a3a5c" stroke-width="6"/>
+      </g>
+
+      <!-- Column 4 — fades out toward center -->
+      <g opacity="0.55">
+        <rect x="452" y="0" width="148" height="148" fill="url(#skyReflect)" stroke="#16324e" stroke-width="6"/>
+        <rect x="452" y="154" width="148" height="148" fill="url(#glassShine)" stroke="#16324e" stroke-width="6"/>
+        <rect x="452" y="308" width="148" height="148" fill="url(#glassShine2)" stroke="#16324e" stroke-width="6"/>
+        <rect x="452" y="462" width="148" height="148" fill="url(#skyReflect)" stroke="#16324e" stroke-width="6"/>
+        <rect x="452" y="616" width="148" height="148" fill="url(#glassShine)" stroke="#16324e" stroke-width="6"/>
+        <rect x="452" y="770" width="148" height="148" fill="url(#glassShine2)" stroke="#16324e" stroke-width="6"/>
+      </g>
+
+      <!-- Column 5 — very faded -->
+      <g opacity="0.3">
+        <rect x="606" y="0" width="148" height="148" fill="url(#glassShine)" stroke="#122b42" stroke-width="6"/>
+        <rect x="606" y="154" width="148" height="148" fill="url(#skyReflect)" stroke="#122b42" stroke-width="6"/>
+        <rect x="606" y="308" width="148" height="148" fill="url(#glassShine2)" stroke="#122b42" stroke-width="6"/>
+        <rect x="606" y="462" width="148" height="148" fill="url(#glassShine)" stroke="#122b42" stroke-width="6"/>
+        <rect x="606" y="616" width="148" height="148" fill="url(#skyReflect)" stroke="#122b42" stroke-width="6"/>
+        <rect x="606" y="770" width="148" height="148" fill="url(#glassShine2)" stroke="#122b42" stroke-width="6"/>
+      </g>
+
+      <!-- Right side — architectural structural elements -->
+      <g opacity="0.65">
+        <!-- Tall narrow profiles right side — like PVC window profiles -->
+        <rect x="920" y="0" width="12" height="900" fill="#1a3a5c" opacity="0.7"/>
+        <rect x="980" y="0" width="12" height="900" fill="#1a3a5c" opacity="0.5"/>
+        <rect x="1060" y="0" width="12" height="900" fill="#1a3a5c" opacity="0.4"/>
+        <rect x="1160" y="0" width="12" height="900" fill="#1a3a5c" opacity="0.3"/>
+
+        <!-- horizontal rails -->
+        <rect x="900" y="148" width="500" height="8" fill="#1a3a5c" opacity="0.6"/>
+        <rect x="900" y="302" width="500" height="8" fill="#1a3a5c" opacity="0.5"/>
+        <rect x="900" y="456" width="500" height="8" fill="#1a3a5c" opacity="0.4"/>
+        <rect x="900" y="610" width="500" height="8" fill="#1a3a5c" opacity="0.35"/>
+
+        <!-- Glass panes right -->
+        <rect x="932" y="10" width="42" height="130" fill="url(#skyReflect)" opacity="0.5"/>
+        <rect x="932" y="158" width="42" height="130" fill="url(#glassShine)" opacity="0.4"/>
+        <rect x="932" y="310" width="42" height="130" fill="url(#glassShine2)" opacity="0.45"/>
+        <rect x="932" y="464" width="42" height="130" fill="url(#skyReflect)" opacity="0.35"/>
+        <rect x="932" y="618" width="42" height="130" fill="url(#glassShine)" opacity="0.3"/>
+
+        <rect x="992" y="10" width="60" height="130" fill="url(#glassShine2)" opacity="0.35"/>
+        <rect x="992" y="158" width="60" height="130" fill="url(#skyReflect)" opacity="0.3"/>
+        <rect x="992" y="310" width="60" height="130" fill="url(#glassShine)" opacity="0.25"/>
+        <rect x="992" y="464" width="60" height="130" fill="url(#glassShine2)" opacity="0.2"/>
+
+        <rect x="1072" y="10" width="80" height="130" fill="url(#skyReflect)" opacity="0.25"/>
+        <rect x="1072" y="158" width="80" height="130" fill="url(#glassShine)" opacity="0.2"/>
+        <rect x="1072" y="310" width="80" height="130" fill="url(#glassShine2)" opacity="0.18"/>
+
+        <rect x="1172" y="10" width="120" height="130" fill="url(#glassShine)" opacity="0.18"/>
+        <rect x="1172" y="158" width="120" height="130" fill="url(#skyReflect)" opacity="0.15"/>
+      </g>
+
+      <!-- Gold accent lines — like profile inserts -->
+      <line x1="0" y1="0" x2="0" y2="900" stroke="#C8891E" stroke-width="3" opacity="0.15"/>
+      <line x1="144" y1="0" x2="144" y2="900" stroke="#C8891E" stroke-width="1" opacity="0.08"/>
+      <line x1="298" y1="0" x2="298" y2="900" stroke="#C8891E" stroke-width="1" opacity="0.06"/>
+
+      <!-- Reflective shimmer on select panels -->
+      <rect x="5" y="5" width="138" height="60" fill="rgba(255,255,255,0.04)" rx="1"/>
+      <rect x="149" y="159" width="138" height="40" fill="rgba(255,255,255,0.04)" rx="1"/>
+      <rect x="5" y="315" width="80" height="30" fill="rgba(255,255,255,0.03)" rx="1"/>
+    </svg>
+  </div>
+
+  <div class="hero-overlay"></div>
+  <div class="hero-glow"></div>
+
+  <div class="hero-inner">
+    <span class="hero-badge">Salamander &amp; Ramplast · Roto/Reze · &gt;21 Ani Experiență</span>
+    <div class="hero-eyebrow">MTS PVC — Tâmplărie PVC Premium</div>
+
+    <h1>
+      <span class="thin">Dacă plătești facturi mari</span>
+      și tot îți e frig
+      <span class="gold">prin geamuri...</span>
+    </h1>
+
+    <p class="hero-sub">
+      Stai iarna cu caloriferul pornit la maxim și tot simți curentul pe lângă geam? Problema nu e caloriferul — e tâmplăria. Și se poate rezolva o dată, definitiv.
+    </p>
+
+    <p class="hero-pain">
+      Profile Salamander proEvolution (Uw 1.1 W/m²K) montate de echipa proprie — nu de un intermediar care dispare după vânzare. Producător cu &gt;21 ani experiență din Pantelimon Ilfov. Showroom fizic Ploiești.
+    </p>
+
+    <div class="urgency-strip">
+      Programările pentru montaj se ocupă rapid — verifică disponibilitatea acum
+    </div>
+
+    <div class="hero-cta-row">
+      <a href="https://mtspvc.ro/" target="_blank" rel="noopener" class="btn-hero">Cere oferta acum — prinde montajul înainte de sezonul rece</a>
+    </div>
+    <span class="hero-note" style="display:block;margin-top:14px;">Fără obligații · Răspuns în 24h · Showroom Ploiești</span>
+
+    <div class="hero-stats">
+      <div class="stat">
+        <span class="stat-num">21+</span>
+        <span class="stat-label">Ani<br>experiență</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">1.1</span>
+        <span class="stat-label">Uw W/m²K<br>Salamander</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">47</span>
+        <span class="stat-label">dB izolație<br>fonică</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">20+</span>
+        <span class="stat-label">Ani<br>durabilitate</span>
+      </div>
+    </div>
+  </div>
+
+  <span class="scroll-hint">Continuă ↓</span>
+</section>
+
+
+<!-- ══ PAIN ══ -->
+<section class="pain-section">
+  <div class="container">
+    <span class="section-eyebrow fade-up">Înțeleg exact cum te simți</span>
+    <h2 class="section-h2 fade-up">Ai mai încercat. <em>Problema tot rămâne.</em></h2>
+    <div class="divider-gold fade-up"></div>
+
+    <p class="pain-intro fade-up">
+      Ai schimbat deja tâmplăria o dată — sau ești pe cale s-o faci. Știi că pierzi căldură și bani. Dar de fiecare dată ai impresia că <strong>ce alegi e fie prea scump, fie prea slab.</strong>
+    </p>
+
+    <ul class="pain-list fade-up">
+      <li>
+        <span class="icon">✖</span>
+        <span>Ai ales tâmplărie ieftină cu profile de 3 camere — <strong>condensul a apărut după primul iarnă</strong>, feroneriile s-au uzat în 5 ani și ai plătit din nou.</span>
+      </li>
+      <li>
+        <span class="icon">✖</span>
+        <span>Ai apelat la o firmă locală care <strong>a montat defect sau a dispărut după vânzare</strong> — garanția a rămas pe hârtie, telefonul nu mai răspunde.</span>
+      </li>
+      <li>
+        <span class="icon">✖</span>
+        <span>Ai căutat ore întregi pe forumuri: Salamander sau Rehau? 5 sau 7 camere? <strong>Fiecare expert spune altceva.</strong> Nimeni nu îți dă un răspuns clar.</span>
+      </li>
+      <li>
+        <span class="icon">✖</span>
+        <span>Iarna stai cu caloriferul pornit și <strong>tot simți curentul pe lângă geam</strong> — izolația declarată nu corespunde cu ce se întâmplă în casă.</span>
+      </li>
+    </ul>
+
+    <div class="scene-box fade-up">
+      <h3>Știi cum arată o dimineață de ianuarie cu geamuri proaste?</h3>
+      <ul>
+        <li>Caloriferul merge non-stop — factura la gaz crește lunar, dar casa nu se încălzește.</li>
+        <li>Dimineața găsești condens pe tocul ferestrei și umezeală în colțuri.</li>
+        <li>Copilul se trezește cu frig în cameră, deși termostatul arată 22°C.</li>
+        <li>Vecinii din bloc au renovat — tu auzi în continuare tot traficul de afară.</li>
+      </ul>
+    </div>
+
+    <div class="not-fault fade-up">
+      <p>
+        Nu ești singurul în această situație — și <strong>nu e vina ta.</strong> Piața e plină de intermediari care vând profile ieftine ca "premium" și dispar după montaj. Exact de aceea există MTS PVC.
+      </p>
+    </div>
+
+    <div class="center fade-up">
+      <a href="https://mtspvc.ro/" target="_blank" rel="noopener" class="btn-section">Cere oferta acum</a>
+      <span class="btn-note-dark">Fără obligații · Răspuns în 24h · Showroom Ploiești disponibil</span>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══ BULLETS / CE PRIMESTI ══ -->
+<section class="bullets-section">
+  <div class="container" style="position:relative;z-index:1;">
+    <span class="section-eyebrow fade-up">Ce obții cu MTS PVC</span>
+    <h2 class="section-h2 fade-up">Ce se schimbă <em>real în casa ta</em></h2>
+    <p class="bullets-intro fade-up">Nu promisiuni — specificații tehnice documentate și service real, nu de pe hârtie.</p>
+
+    <div class="bullets-grid fade-up">
+      <div class="bullet-card">
+        <span class="bullet-check">▸</span>
+        <p><strong>Uw 1.1 W/m²K</strong> — înseamnă mai puțină căldură pierdută prin geamuri iarna. Facturile scad vizibil, lună de lună. Chiar dacă ai mai schimbat tâmplăria o dată și tot ai probleme.</p>
+      </div>
+      <div class="bullet-card">
+        <span class="bullet-check">▸</span>
+        <p>De ce <strong>profilele ieftine de 3 camere te costă mai mult pe termen lung</strong> — și ce face Salamander proEvolution / Ramplast Ultratherm 7 camere diferit față de ce ai acum.</p>
+      </div>
+      <div class="bullet-card">
+        <span class="bullet-check">▸</span>
+        <p><strong>47 dB izolație fonică reală</strong> — nu mai auzi traficul, vecinii sau șantierul de lângă. Liniștea în casă pe care nu ai știut că e posibilă cu PVC.</p>
+      </div>
+      <div class="bullet-card">
+        <span class="bullet-check">▸</span>
+        <p>Lucrezi direct cu fabrica — <strong>nu cu o firmă intermediară care dispare după montaj.</strong> Service, reglaj și întreținere post-montaj dintr-un singur loc, de la același număr de telefon.</p>
+      </div>
+      <div class="bullet-card">
+        <span class="bullet-check">▸</span>
+        <p>Feronerie Roto/Reze germană — <strong>investiția o faci o singură dată pentru 20+ ani</strong>, nu la fiecare 5 ani când îți cedează mânerele și balamalele.</p>
+      </div>
+      <div class="bullet-card">
+        <span class="bullet-check">▸</span>
+        <p><strong>Showroom fizic Ploiești</strong> — poți vedea, atinge și compara profilele Salamander și Ramplast înainte de decizie. Nu cumpăra tâmplărie pe care nu ai văzut-o fizic.</p>
+      </div>
+    </div>
+
+    <div class="center fade-up">
+      <a href="https://mtspvc.ro/" target="_blank" rel="noopener" class="btn-hero">Dacă vrei să nu mai pierzi căldură și bani în fiecare iarnă — cere oferta ta personalizată</a>
+      <span class="btn-note">Producător propriu · Pantelimon Ilfov · Showroom Ploiești</span>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══ SPECS ══ -->
+<section class="specs-section">
+  <div class="container-wide">
+    <span class="section-eyebrow fade-up" style="text-align:center;display:block;">Specificații tehnice reale</span>
+    <h2 class="section-h2 fade-up" style="text-align:center;">Numerele care <em>contează în factura ta</em></h2>
+    <div class="divider-gold fade-up" style="margin:0 auto 40px;"></div>
+
+    <div class="specs-grid fade-up">
+      <div class="spec-card">
+        <span class="spec-icon">🏠</span>
+        <div class="spec-name">Izolație Termică</div>
+        <div class="spec-value">Uw 1.1</div>
+        <p class="spec-desc">W/m²K — Salamander proEvolution. Înseamnă mai puțină căldură pierdută iarna → facturi mai mici lună de lună. Standard nZEB.</p>
+      </div>
+      <div class="spec-card">
+        <span class="spec-icon">🔇</span>
+        <div class="spec-name">Izolație Fonică</div>
+        <div class="spec-value">47 dB</div>
+        <p class="spec-desc">Nu mai auzi traficul, vecinii sau șantierul de lângă. Zgomotul strazii dispare — dormi și lucrezi în liniște reală.</p>
+      </div>
+      <div class="spec-card">
+        <span class="spec-icon">📅</span>
+        <div class="spec-name">Durabilitate</div>
+        <div class="spec-value">20+ ani</div>
+        <p class="spec-desc">Profile PVC cu garanție reală, feronerie Roto/Reze care nu se uzează în 5 ani. Investiția o faci o singură dată.</p>
+      </div>
+    </div>
+
+    <div class="center fade-up">
+      <a href="https://mtspvc.ro/" target="_blank" rel="noopener" class="btn-section">Cere oferta — prinde montajul înainte de sezonul rece</a>
+      <span class="btn-note-dark">Showroom Ploiești · Pantelimon Ilfov · Răspuns în 24h</span>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══ STORY ══ -->
+<section class="story-section">
+  <div class="container-wide">
+    <div class="story-layout">
+      <div class="story-visual fade-up">
+        <div class="story-photo-wrap">
+          <img src="data:image/jpeg;base64,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" alt="MTS PVC — Fabrica de Tâmplărie PVC" style="width:100%;height:100%;object-fit:contain;background:#0C1B2E;padding:20px;border-radius:12px;">
+        </div>
+        <div class="story-badge-float">
+          <div class="num">21+</div>
+          <div class="lbl">ani experiență</div>
+        </div>
+      </div>
+
+      <div class="story-text fade-up">
+        <span class="section-eyebrow">Cine suntem și de ce să ne ascultați</span>
+        <h2 class="section-h2">Am văzut tot ce <em>poate merge prost</em> cu tâmplăria PVC.</h2>
+        <div class="divider-gold"></div>
+
+        <p>
+          <strong>MTS PVC</strong> a început acum mai bine de 21 de ani în Pantelimon, Ilfov — cu o convingere simplă: dacă vrei să faci tâmplărie bună, trebuie s-o produci tu, s-o montezi tu și să fii acolo și după aceea.
+        </p>
+
+        <p>
+          În douăzeci și unu de ani am montat tâmplărie la sute de case și apartamente din Ilfov, Prahova și București. Am văzut tot ce poate merge prost: profile ieftine care fac condens după primul iarnă, firme intermediare care dispar după vânzare, montaje defecte care anulează orice calitate a profilului.
+        </p>
+
+        <div class="story-quote">
+          „Un profil german montat prost e mai rău decât un profil mediocru montat bine. Calitatea începe de la profil și se termină cu service-ul de după 10 ani."
+        </div>
+
+        <p>
+          De aceea lucrăm direct cu fabrică — nu cu intermediari. Echipă proprie de montaj. Service disponibil după fiecare lucrare, de la același număr de telefon.
+        </p>
+
+        <p>
+          Showroom-ul din Ploiești există pentru un singur motiv: <strong>să poți vedea și atinge profilul înainte de a decide.</strong> Nu cumpăra tâmplărie pe care nu ai văzut-o fizic.
+        </p>
+
+        <div class="cert-row">
+          <span class="cert-pill">Salamander proEvolution</span>
+          <span class="cert-pill">Ramplast Ultratherm</span>
+          <span class="cert-pill">Feronerie Roto / Reze</span>
+          <span class="cert-pill">Producător propriu</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="center fade-up" style="margin-top: 64px;">
+      <a href="https://mtspvc.ro/" target="_blank" rel="noopener" class="btn-section">Vizitează showroom-ul sau cere oferta</a>
+      <span class="btn-note-dark">Showroom Ploiești · Pantelimon Ilfov · Răspuns în 24h</span>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══ TESTIMONIALS ══ -->
+<section class="testimonials-section">
+  <div class="container">
+    <span class="section-eyebrow fade-up" style="text-align:center;display:block;">Ce spun clienții noștri</span>
+    <h2 class="section-h2 fade-up" style="text-align:center;">Rezultate <em>documentate</em>, nu promisiuni</h2>
+    <div class="divider-gold fade-up" style="margin:0 auto 32px;"></div>
+
+    <p class="proof-note fade-up">⚠ Placeholder — înlocuiește cu testimoniale reale, cu cifre concrete (ex: „Factura la gaz a scăzut de la 900 lei la ~620 lei în ianuarie") și poze reale ale lucrărilor.</p>
+
+    <div class="testimonials-grid fade-up">
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">
+          „Am schimbat toată tâmplăria cu profile Salamander. Prima iarnă am simțit diferența imediat — zero condens, factura la gaz a scăzut de la ~900 lei la ~620 lei în ianuarie. Montajul a fost impecabil și au revenit după 3 luni pentru reglaj gratuit."
+        </p>
+        <div class="testimonial-author">Mihai D. <span>— casă individuală, Ilfov</span></div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">
+          „Am mai schimbat o dată geamurile acum 7 ani cu o firmă ieftină. A durat 4 ani și deja făceau probleme. Cu MTS am ales Ramplast Ultratherm — calitate reală. Nu mai aud nimic din stradă, inclusiv autobuzul de sub geam."
+        </p>
+        <div class="testimonial-author">Elena C. <span>— apartament, Ploiești</span></div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">
+          „Am vizitat showroom-ul din Ploiești și am văzut fizic diferența dintre profile. Am ales Salamander proEvolution. Montajul a durat 2 zile, totul perfect. Recomand 100% — profesioniști care rămân disponibili și după montaj."
+        </p>
+        <div class="testimonial-author">Andrei P. <span>— casă, Prahova</span></div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">
+          „Feroneria de la geamurile vechi se blocase total. MTS a venit, a reparat și a reglat totul în aceeași zi. După am schimbat și tâmplăria — acum totul funcționează perfect. Service-ul post-vânzare există cu adevărat."
+        </p>
+        <div class="testimonial-author">Cristina M. <span>— apartament, București Est</span></div>
+      </div>
+    </div>
+
+    <div class="center fade-up">
+      <a href="https://mtspvc.ro/" target="_blank" rel="noopener" class="btn-section">Vreau și eu această calitate</a>
+      <span class="btn-note-dark">&gt;21 ani experiență · Salamander &amp; Ramplast · Service garantat</span>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══ CTA ══ -->
+<section class="cta-section" id="oferta">
+  <div class="container cta-inner">
+    <span class="section-eyebrow" style="color:var(--gold-light);">O investiție bună, făcută o dată</span>
+    <h2 class="cta-headline">
+      Tâmplărie care
+      <span>ține 20+ ani.</span>
+    </h2>
+    <p class="cta-sub">
+      Dacă vrei să nu mai pierzi căldură și bani în fiecare iarnă — apasă pe buton și cere oferta ta personalizată.
+    </p>
+
+    <div class="cta-checks">
+      <span class="cta-check">Uw 1.1 W/m²K → facturi mai mici</span>
+      <span class="cta-check">47 dB → nu mai auzi strada</span>
+      <span class="cta-check">Service post-vânzare real</span>
+      <span class="cta-check">Showroom fizic Ploiești</span>
+    </div>
+
+    <a href="https://mtspvc.ro/" target="_blank" rel="noopener" class="btn-hero" style="font-size:16px;padding:22px 56px;">Cere oferta gratuită — prinde montajul înainte de sezonul rece</a>
+    <span class="btn-note" style="margin-top:16px;display:block;">Fără obligații · Răspuns în 24h · Str. Câmpului 15, Pantelimon Ilfov</span>
+  </div>
+</section>
+
+
+<!-- ══ PS ══ -->
+<section class="ps-section">
+  <div class="container">
+    <div class="ps-box fade-up">
+      <span class="ps-label">P.S. — pentru cei care sar direct la final</span>
+
+      <h2 class="ps-headline">
+        MTS PVC te ajută să <em>termini cu facturile mari și condensul</em> — lucrând direct cu fabrica, nu cu un intermediar care dispare.
+      </h2>
+
+      <p class="ps-body">
+        Profile germane Salamander &amp; Ramplast. Feronerie Roto/Reze. Producător propriu cu &gt;21 ani experiență din Pantelimon Ilfov. Showroom fizic în Ploiești. Montaj + service + reglaj + întreținere — tot dintr-un singur loc, de la același număr de telefon.
+      </p>
+
+      <div class="ps-pills">
+        <span class="ps-pill">Uw 1.1 W/m²K → facturi mai mici lună de lună</span>
+        <span class="ps-pill">47 dB → nu mai auzi strada, vecinii, șantierul</span>
+        <span class="ps-pill">Funcționează chiar dacă ai mai eșuat cu altă firmă</span>
+      </div>
+
+      <p style="color:rgba(255,255,255,0.3);font-size:13px;margin-bottom:32px;font-weight:300;">
+        Și pentru că știm că încrederea se câștigă — poți vizita showroom-ul înainte de orice decizie.
+      </p>
+
+      <a href="https://mtspvc.ro/" target="_blank" rel="noopener" class="btn-hero">Cere oferta gratuită acum</a>
+      <span class="btn-note">MTS PVC · Str. Câmpului 15, Pantelimon Ilfov · Showroom Ploiești</span>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <p>
+    <strong style="color:rgba(255,255,255,0.45);">MTS PVC</strong> — Tâmplărie PVC Premium Salamander &amp; Ramplast<br>
+    Str. Câmpului 15, Pantelimon, Ilfov · Showroom Ploiești<br>
+    Producător propriu · Montaj · Service · Reglaj · Întreținere<br><br>
+    <span style="color:rgba(255,255,255,0.12);font-size:11px;">
+      &copy; 2026 MTS PVC. Toate drepturile rezervate.<br>
+      Str. Câmpului 15, Pantelimon, Ilfov · <a href="#">Contact</a>
+    </span>
+  </p>
+</footer>
+
+<script>
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        obs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>
